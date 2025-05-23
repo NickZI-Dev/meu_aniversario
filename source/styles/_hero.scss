@@ -1,3 +1,5 @@
+@use "./variables";
+
 .hero {
   background-image: url("../img/7508.jpg");
   background-repeat: no-repeat;
@@ -13,7 +15,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-color: #000;
+    background-color: variables.$isBlack;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,13 +36,23 @@
     text-align: center;
   }
 
-  &__text {
-    margin: 64px 0;
+  &__text,
+  &__count {
     font-family: "Poetsen One", sans-serif;
     font-size: 40px;
     text-align: center;
     line-height: 56px;
     font-weight: 800;
+  }
+
+  &__text {
+    margin: 60px 0 0;
+  }
+
+  &__count {
+    display: block;
+    text-align: center;
+    margin: 32px 0;
   }
 
   @media (max-width: 640px) {
@@ -54,10 +66,15 @@
       font-size: 14px;
     }
 
-    &__text {
-      font-size: 26px;
-      line-height: 28px;
+    &__text,
+    &__count {
+      font-size: 22px;
+      line-height: 24px;
       margin: 38px 0;
+    }
+
+    &__count {
+      font-size: 26px;
     }
   }
 }

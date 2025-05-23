@@ -1,0 +1,47 @@
+@use "../variables";
+
+.infos-bar {
+  padding: 16px 24px;
+  background-color: variables.$isWhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__infos {
+    display: flex;
+    gap: 40px;
+
+    &__item {
+      font-size: 14px;
+      color: variables.$isBlack;
+
+      b {
+        color: variables.$isBlack;
+        font-size: 18px;
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    display: block;
+    padding-bottom: 26px;
+
+    &__infos {
+      display: block;
+
+      &__item {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    gap: 28px;
+    padding: 20px 30px;
+
+    &__infos {
+      align-items: center;
+    }
+  }
+}

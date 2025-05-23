@@ -18,9 +18,90 @@
     <div class="container">
       <h1 class="hero__title">Nícolas Birthday</h1>
       <p class="hero__date">Dia 15 de Agosto de 2025</p>
-      <p class="hero__text">Venha comemorar uma festa incrivel! Começará em 10d 12h 20m 15s</p>
+      <p class="hero__text">Venha comemorar uma festa incrivel! Começará em</p>
+      <span class="hero__count">10d 12h 20m 15s</span>
+      <div class="infos-bar">
+        <ul class="infos-bar__infos">
+          <li class="infos-bar__infos__item">
+            <b>Localização</b>
+            Rua Marechal Deodoro - Olho d'Àgua das Flores/AL
+          </li>
+          <li class="infos-bar__infos__item">
+            <b>Preço</b>
+            A partir de R$ 129,00
+          </li>
+          <li class="infos-bar__infos__item">
+            <b>Quando</b>
+            15/08/2025
+          </li>
+        </ul>
+        <a href="#" class="button button--primary">Confirmar presença</a>
+      </div>
     </div>
   </header>
+  <main>
+    <div class="event event--is-aboutme">
+      <div class="container">
+        <div class="event__details">
+          <h2 class="event__details__title">Quem sou eu?</h2>
+          <p class="event__details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cum ad distinctio eaque! Ipsum odio dolore fuga vel excepturi ad perspiciatis saepe modi! Ipsa adipisci nostrum quae iste esse. Facilis.</p>
+        </div>
+        <img src="./img/Nícolas1.jpg" alt="Foto de Nícolas" class="event__image">
+      </div>
+    </div>
+
+    <div class="event event--is-menu">
+      <div class="container">
+        <div class="event__details">
+          <h2 class="event__details__title">Terá um belo banquete</h2>
+          <p class="event__details__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, cum. Voluptatum quo aliquam quia soluta ducimus architecto consequatur aspernatur perferendis eum unde, incidunt aperiam beatae pariatur! Nihil sint optio fugiat?</p>
+        </div>
+        <div class="show-menu">
+          <nav class="show-menu__tabs">
+            <button data-tab-button="main_course" class="button button--is-active">Pratos principais</button>
+            <button data-tab-button="dessert" class="button">Sobremesas</button>
+            <button data-tab-button="drinks" class="button">Bebidas</button>
+          </nav>
+          <ul data-tab-id="main_course" class="show-menu__list show-menu__list--is-active">
+            <li class="show-menu__list__item">
+              <img src="./img/bifes-crus-meio-grelhados-e-meio-prontos-na-grelha.jpg" alt="Churrasco">
+            </li>
+            <li class="show-menu__list__item">
+              <img src="./img/comida-brasileira-no-prato-e-copo-de-cerveja.jpg" alt="Coxinhas">
+            </li>
+            <li class="show-menu__list__item">
+              <img src="./img/lasanha-classica-com-molho-a-bolonhesa.jpg" alt="Lasanha">
+            </li>
+          </ul>
+          <ul data-tab-id="dessert" class="show-menu__list show-menu__list">
+            <li class="show-menu__list__item">
+              <img src="./img/bifes-crus-meio-grelhados-e-meio-prontos-na-grelha.jpg" alt="Churrasco">
+            </li>
+            <li class="show-menu__list__item">
+              <img src="./img/comida-brasileira-no-prato-e-copo-de-cerveja.jpg" alt="Coxinhas">
+            </li>
+            <li class="show-menu__list__item">
+              <img src="./img/lasanha-classica-com-molho-a-bolonhesa.jpg" alt="Lasanha">
+            </li>
+          </ul>
+          <ul data-tab-id="drinks" class="show-menu__list show-menu__list">
+            <li class="show-menu__list__item">
+              <img src="./img/bifes-crus-meio-grelhados-e-meio-prontos-na-grelha.jpg" alt="Churrasco">
+            </li>
+            <li class="show-menu__list__item">
+              <img src="./img/comida-brasileira-no-prato-e-copo-de-cerveja.jpg" alt="Coxinhas">
+            </li>
+            <li class="show-menu__list__item">
+              <img src="./img/lasanha-classica-com-molho-a-bolonhesa.jpg" alt="Lasanha">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
+
+
+<script src="./scripts/main.js"></script>
 
 </html>
