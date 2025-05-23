@@ -10,16 +10,16 @@
 
   &--is-aboutme {
     background-image: linear-gradient(
-      187deg,
+      180deg,
       variables.$greenColor,
       variables.$darkGreen
     );
   }
   &--is-menu {
     background-image: linear-gradient(
-      187deg,
+      180deg,
       variables.$darkGreen,
-      variables.$purpleColor
+      variables.$isBlack
     );
 
     .container {
