@@ -5,11 +5,18 @@
     "dev": "parcel --no-cache source/index.html source/styles/main.scss source/scripts/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickZI-Dev/meu_aniversario.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickZI-Dev/meu_aniversario/issues"
+  },
+  "homepage": "https://github.com/NickZI-Dev/meu_aniversario#readme",
   "description": "",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.15.1",
-    "parcel": "^2.15.1"
+    "parcel": "^2.8.0"
   }
 }
