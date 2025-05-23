@@ -17,6 +17,7 @@
   "homepage": "https://github.com/NickZI-Dev/meu_aniversario#readme",
   "description": "",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0"
   }
 }
