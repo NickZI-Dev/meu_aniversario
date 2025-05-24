@@ -1,4 +1,7 @@
+AOS.init();
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Aba de prato principal/ Sobremesa / Bebidas
   const buttons = document.querySelectorAll("[data-tab-button]");
 
   for (let i = 0; i < buttons.length; i++) {
@@ -11,6 +14,40 @@ document.addEventListener("DOMContentLoaded", function () {
       button.target.classList.add("button--is-active");
     });
   }
+
+  const dataDoEvento = new Date("Aug 15, 2025 19:00:00");
+  const timeStampDoEvento = dataDoEvento.getTime();
+
+  const timeCount = setInterval(function () {
+    const actual = new Date();
+    const timeStampAtual = actual.getTime();
+
+    const distanciaAteOEvento = timeStampDoEvento - timeStampAtual;
+
+    const diasEmMs = 1000 * 60 * 60 * 24;
+    const horasEmMs = 1000 * 60 * 60;
+    const minutosEmMs = 1000 * 60;
+
+    const diasAteOEvento = Math.floor(distanciaAteOEvento / diasEmMs);
+    const horasAteOEvento = Math.floor(
+      (distanciaAteOEvento % diasEmMs) / horasEmMs
+    );
+    const minutosAteOEvento = Math.floor(
+      (distanciaAteOEvento % horasEmMs) / minutosEmMs
+    );
+    const segundosAteOEvento = Math.floor(
+      (distanciaAteOEvento % minutosEmMs) / 1000
+    );
+
+    document.querySelector(
+      ".hero__count"
+    ).innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
+
+    if (distanciaAteOEvento < 0) {
+      clearInterval(timeCount);
+      document.querySelector(".hero__count").innerHTML = "Evento expirado";
+    }
+  }, 1000);
 });
 
 function hiddenUnderline() {

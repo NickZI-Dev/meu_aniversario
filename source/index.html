@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <link rel="stylesheet" href="./styles/main.scss">
 </head>
 
@@ -19,7 +21,9 @@
       <h1 class="hero__title">Nícolas Birthday</h1>
       <p class="hero__date">Dia 15 de Agosto de 2025</p>
       <p class="hero__text">Venha comemorar uma festa incrivel! Começará em</p>
-      <span class="hero__count">10d 12h 20m 15s</span>
+
+      <span class="hero__count"></span>
+
       <div class="infos-bar">
         <ul class="infos-bar__infos">
           <li class="infos-bar__infos__item">
@@ -52,11 +56,11 @@
 
     <div class="event event--is-menu">
       <div class="container">
-        <div class="event__details">
+        <div class="event__details" data-aos="fade-right">
           <h2 class="event__details__title">Terá um belo banquete</h2>
           <p class="event__details__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, cum. Voluptatum quo aliquam quia soluta ducimus architecto consequatur aspernatur perferendis eum unde, incidunt aperiam beatae pariatur! Nihil sint optio fugiat?</p>
         </div>
-        <div class="show-menu">
+        <div class="show-menu" data-aos="fade-left">
           <nav class="show-menu__tabs">
             <button data-tab-button="main_course" class="button button--is-active">Pratos principais</button>
             <button data-tab-button="dessert" class="button">Sobremesas</button>
@@ -101,7 +105,7 @@
   </main>
 </body>
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="./scripts/main.js"></script>
 
 </html>
