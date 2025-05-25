@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Configurações da contagem regressiva da página
+
   const dataDoEvento = new Date("Aug 15, 2025 19:00:00");
   const timeStampDoEvento = dataDoEvento.getTime();
 
@@ -43,11 +45,29 @@ document.addEventListener("DOMContentLoaded", function () {
       ".hero__count"
     ).innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
 
+    document.getElementById("days").innerHTML = `${diasAteOEvento}d`;
+    document.getElementById("hours").innerHTML = `${horasAteOEvento}h`;
+    document.getElementById("minutes").innerHTML = `${minutosAteOEvento}m`;
+    document.getElementById("seconds").innerHTML = `${segundosAteOEvento}s`;
+
     if (distanciaAteOEvento < 0) {
       clearInterval(timeCount);
       document.querySelector(".hero__count").innerHTML = "Evento expirado";
     }
   }, 1000);
+
+  const heroPage = document.querySelector(".hero");
+  const heroHeight = heroPage.clientHeight;
+
+  window.addEventListener("scroll", function () {
+    const positionY = window.scrollY;
+
+    if (positionY < heroHeight) {
+      hiddenCount();
+    } else {
+      showCount();
+    }
+  });
 });
 
 function hiddenUnderline() {
@@ -64,4 +84,16 @@ function hiddenTabs() {
   for (let i = 0; i < tabContainer.length; i++) {
     tabContainer[i].classList.remove("show-menu__list--is-active");
   }
+}
+
+function hiddenCount() {
+  const heroCount = document.querySelector(".main__count");
+
+  heroCount.classList.add("main__count--is-hidden");
+}
+
+function showCount() {
+  const heroCount = document.querySelector(".main__count");
+
+  heroCount.classList.remove("main__count--is-hidden");
 }
